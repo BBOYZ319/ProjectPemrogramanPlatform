@@ -13,8 +13,10 @@ app.use(loggerMiddleware);
 app.use(authMiddleware);
 app.use(bodyParser.json());
 app.use(express.json());
-app.use('/mahasiswa', mahasiswaController);
-app.put('/mahasiswa', mahasiswaController);
+pp.use('/mahasiswa', mahasiswaController);
+app.use('/mahasiswa/nim', mahasiswaController);
+app.put('/mahasiswa/nim', mahasiswaController);
+app.post('/mahasiswa',mahasiswaController );
 app.delete('/mahasiswa', loggerMiddleware, authMiddleware, mahasiswaController );
 app.post('/generate-token', (req, res) => {
     const userData = {
