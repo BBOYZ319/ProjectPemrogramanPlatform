@@ -13,7 +13,7 @@ app.use(loggerMiddleware);
 app.use(authMiddleware);
 app.use(bodyParser.json());
 app.use(express.json());
-pp.use('/mahasiswa', mahasiswaController);
+app.use('/mahasiswa', mahasiswaController);
 app.use('/mahasiswa/nim', mahasiswaController);
 app.put('/mahasiswa/nim', mahasiswaController);
 app.post('/mahasiswa',mahasiswaController );
